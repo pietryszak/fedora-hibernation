@@ -1,12 +1,12 @@
 Btrfs hibernation script 
 
 ```bash
-mkdir -p ~/.gc && cd ~/.gc && git clone --quiet https://github.com/pietryszak/fedora-hibernation.git && cd fedora-hibernation && chmod +x hibernation.sh after-restart.sh && ./hibernation.sh 
+mkdir -p ~/.gc && cd ~/.gc && git clone --quiet https://github.com/pietryszak/fedora-hibernation.git && cd fedora-hibernation && chmod +x hibernation.sh after-restart.sh
 ```
 
 ### Before run script adjust your swap size
 ```bash
-sudo sed -i 's/sudo fallocate --length 96GiB /swap/swapfile/sudo fallocate --length YOUR_SWAP_FILE_GiB /swap/swapfile/g' ~/.gc/fedora-hibernation/hibernation.sh
+sudo sed -i 's/sudo fallocate --length 96GiB /swap/swapfile/sudo fallocate --length YOUR_SWAP_FILE_GiB /swap/swapfile/g' ~/.gc/fedora-hibernation/hibernation.sh && ./hibernation.sh
 ```
 #### Redhat swap size recommendations
 
